@@ -1,0 +1,84 @@
+<!doctipe html>
+<html lang=hy>
+<head>
+    <meta charset=UTF-8>
+    <title>Տոնածառ</title>
+	<style>
+	    body
+		    {
+			    baceground:#0b1d2a;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				height:100vh;
+			}
+		.tree
+		    {
+			    position:relative;
+			}
+		.triangle
+		    {
+			    width:0;
+				height:0;
+				border-left:120px solid transparent;
+				border-right:120px solid transparent;
+				border-button:160px solid #0a7a3d;
+				margin:-40px auto;
+			}
+		.teiangle:nth-child(2)
+		    {
+			    border-button-width:180px;
+			}
+		.teiangle:nth-child(3)
+		    {
+			    border-button-width:200px;
+			}
+		.start
+		    {
+			    color:gold;
+				font-size:40px;
+				text-align:center;
+				animation: twicle 1s infinite alternate;
+			}
+	    @keyframes twinkle
+		    {
+			    from{opacity:0.5;}
+				top{opacity:1;}
+			}
+		.light
+		    {
+			    width:10px;
+				height:10px;
+				border-tadius:50%;
+				position:absolute;
+				animation: blink 1.2s infinite alternate;
+			}
+		.light.red{background:red; left:40px; top:80px;}
+		.light.blue{background:blue; left:120px; top:120px;}
+		.light.yellow{backgroun:yellow; left:80px; top:160px;}
+		.light.pink{background:hotpink; left:150px; top:200px;}
+		.light.cyan{background:cyan; left:60px; top:220px;}
+		@keyframes blink 
+		    {
+			    from{opacity:0.2;}
+				to{opacity:1;}
+			}
+	</style>
+</head>
+<body>
+    <div class=tree>
+	    <div class=star>*</div>
+		
+		<div class=triangle></div>
+		<div class=triangle></div>
+		<div class=triangle></div>
+		
+		<div class=light.red></div>
+		<div class=light.blue></div>
+		<div class=light.yellow></div>
+		<div class=light.pink></div>
+		<div class=light.cyan></div>
+	</div>	
+</body>
+   
+</html>
