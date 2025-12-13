@@ -17,35 +17,28 @@ body {
     position:relative;
 }
 
+/* Աստղը նույնպես թարթում է */
+.star {
+    color: gold;
+    font-size:40px;
+    text-align:center;
+    animation: blink 1s infinite alternate;
+}
+
+/* Եռանկյունները՝ վերևից ներքև՝ փոքր→միջին→մեծ */
 .triangle {
     width:0;
     height:0;
     border-left:120px solid transparent;
     border-right:120px solid transparent;
-    border-bottom:160px solid #0a7a3d;
     margin:-40px auto;
 }
 
-.triangle:nth-of-type(2) {
-    border-bottom-width:180px;
-}
+.triangle:nth-of-type(1) { border-bottom:140px solid #0a7a3d; }
+.triangle:nth-of-type(2) { border-bottom:180px solid #0a7a3d; }
+.triangle:nth-of-type(3) { border-bottom:220px solid #0a7a3d; }
 
-.triangle:nth-of-type(3) {
-    border-bottom-width:200px;
-}
-
-.star {
-    color:gold;
-    font-size:40px;
-    text-align:center;
-    animation: twicle 1s infinite alternate;
-}
-
-@keyframes twicle {
-    from { opacity:0.5; }
-    to { opacity:1; }
-}
-
+/* Լույսերը թարթում են */
 .light {
     width:10px;
     height:10px;
@@ -54,12 +47,13 @@ body {
     animation: blink 1.2s infinite alternate;
 }
 
-.light.red { background:red; left:40px; top:80px; }
-.light.blue { background:blue; left:120px; top:120px; }
-.light.yellow { background:yellow; left:80px; top:160px; }
-.light.pink { background:hotpink; left:150px; top:200px; }
-.light.cyan { background:cyan; left:60px; top:220px; }
+.light.red { background:red; left:40px; top:90px; }
+.light.blue { background:blue; left:120px; top:140px; }
+.light.yellow { background:yellow; left:80px; top:190px; }
+.light.pink { background:hotpink; left:150px; top:240px; }
+.light.cyan { background:cyan; left:60px; top:270px; }
 
+/* Թարթող անիմացիա */
 @keyframes blink {
     from { opacity:0.2; }
     to { opacity:1; }
