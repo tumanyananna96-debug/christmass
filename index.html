@@ -68,18 +68,19 @@ body {
 	
 /* Ձյուն */
 .snowflake {
-    position: absolute;
-    top: -10px;
+    position: fixed;
     background: white;
     border-radius: 50%;
     opacity: 0.8;
+    pointer-events: none;
+    z-index: 1000;
     animation-name: fall;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
 
 @keyframes fall {
-    0%   { transform: translateY(0) translateX(0); }
+    0%   { transform: translateY(-10px) translateX(0); }
     100% { transform: translateY(100vh) translateX(20px); }
 }
 </style>
@@ -109,15 +110,15 @@ body {
 </div>
 <script>
 // Ստեղծում ենք ձյուն
-const snowCount = 50;
-for(let i=0;i<snowCount;i++){
-    let snow = document.createElement('div');
+const snowCount = 80;
+for(let i = 0; i < snowCount; i++){
+    const snow = document.createElement('div');
     snow.classList.add('snowflake');
-    let size = Math.random()*5 + 2; // 2px-7px
-    snow.style.width = size+'px';
-    snow.style.height = size+'px';
+    const size = Math.random()*5 + 2; // 2px-7px
+    snow.style.width = size + 'px';
+    snow.style.height = size + 'px';
     snow.style.left = Math.random()*100 + 'vw';
-    snow.style.animationDuration = (Math.random()*5 + 5) + 's'; // 5-10 վայրկյան
+    snow.style.animationDuration = (Math.random()*5 + 5) + 's';
     snow.style.opacity = Math.random();
     document.body.appendChild(snow);
 }
